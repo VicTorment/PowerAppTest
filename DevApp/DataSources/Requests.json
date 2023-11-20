@@ -1,0 +1,157 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mpc_requests",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mpc_request",
+    "MaxGetRowsCount": 500,
+    "Name": "Requests",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "emailaddress": "Email Address",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "mpc_Assigneduser": "Assigned user",
+      "mpc_client": "Client",
+      "mpc_concretescenario": "Concrete scenario",
+      "mpc_context": "Context",
+      "mpc_keydataandlimitations": "Key data and limitations",
+      "mpc_name": "Request ID",
+      "mpc_proposeddeadline": "Proposed deadline",
+      "mpc_request_Annotations": "Notes",
+      "mpc_request_AsyncOperations": "System Jobs",
+      "mpc_request_BulkDeleteFailures": "Bulk Delete Failures",
+      "mpc_request_connections1": "Connections (mpc_request_connections1)",
+      "mpc_request_connections2": "Connections (mpc_request_connections2)",
+      "mpc_request_DuplicateBaseRecord": "Duplicate Records (mpc_request_DuplicateBaseRecord)",
+      "mpc_request_DuplicateMatchingRecord": "Duplicate Records (mpc_request_DuplicateMatchingRecord)",
+      "mpc_request_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "mpc_request_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "mpc_request_ProcessSession": "Process Sessions",
+      "mpc_request_SyncErrors": "Sync Errors",
+      "mpc_request_Teams": "Teams",
+      "mpc_requestid": "Request",
+      "mpc_statusrequest": "Status Request",
+      "mpc_title": "Title",
+      "mpc_typeofprototype": "Type of prototype",
+      "mpc_userinformation": "User Information",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Requests",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Requests (Views)",
+    "Name": "_mpc_request_views",
+    "RelatedEntityName": "Requests",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "23a8fa2d-dc7c-4c50-97da-bf2e91c1b2ff": "Request Advanced Find View",
+      "4cc041e7-bc33-464f-8239-a8e48bf22177": "Active Requests",
+      "5e59473a-34c5-4ddc-9eca-681565338712": "Inactive Requests",
+      "7370fd8c-5541-4fa4-b1fd-26a4a9244e7b": "Request Lookup View",
+      "75488ab3-69dd-4f71-880d-870b1a2c6b45": "Request Associated View"
+    }
+  },
+  {
+    "DisplayName": "Type of prototype (Requests)",
+    "Name": "mpc_request_mpc_typeofprototype",
+    "OptionSetInfoNameMapping": {
+      "865": "Interactive (High Effort)",
+      "866": "High-Detailed (Medium Effort)",
+      "867": "Digital Sketch (Low Effort)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mpc_typeofprototype",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mpc_typeofprototype",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Requests)",
+    "Name": "mpc_request_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Requests)",
+    "Name": "mpc_request_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Request Status Choice",
+    "Name": "mpc_requeststatuschoice",
+    "OptionSetInfoNameMapping": {
+      "123": "Not Started",
+      "124": "In Progress",
+      "125": "On Hold",
+      "126": "Completed",
+      "127": "Cancelled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mpc_statusrequest",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mpc_statusrequest",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  }
+]

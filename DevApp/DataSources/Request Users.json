@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mpc_requestuserses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mpc_requestusers",
+    "MaxGetRowsCount": 500,
+    "Name": "Request Users",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "mpc_name": "Name",
+      "mpc_request_Assigneduser_mpc_requestusers": "Requests",
+      "mpc_requestusers_AsyncOperations": "System Jobs",
+      "mpc_requestusers_BulkDeleteFailures": "Bulk Delete Failures",
+      "mpc_requestusers_DuplicateBaseRecord": "Duplicate Records (mpc_requestusers_DuplicateBaseRecord)",
+      "mpc_requestusers_DuplicateMatchingRecord": "Duplicate Records (mpc_requestusers_DuplicateMatchingRecord)",
+      "mpc_requestusers_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "mpc_requestusers_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "mpc_requestusers_ProcessSession": "Process Sessions",
+      "mpc_requestusers_SyncErrors": "Sync Errors",
+      "mpc_requestusersid": "Request Users",
+      "mpc_useremail": "UserEmail",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Request Users",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Request Users (Views)",
+    "Name": "_mpc_requestusers_views",
+    "RelatedEntityName": "Request Users",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "4955c0d6-394e-4745-ab19-3be6e6cb3b36": "Active Request Users",
+      "5f155cfe-e38f-437f-9d04-2954e7532ab1": "Request Users Advanced Find View",
+      "d61acc02-53d2-4e8d-b838-87c302addb89": "Request Users Associated View",
+      "eafc7c37-d1c0-410b-8c07-158f3d9d7311": "Request Users Lookup View",
+      "f8b75804-fa5f-4038-a4d1-a575e0a52452": "Inactive Request Users"
+    }
+  },
+  {
+    "DisplayName": "Status (Request Users)",
+    "Name": "mpc_requestusers_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Request Users"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Request Users",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Request Users)",
+    "Name": "mpc_requestusers_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Request Users"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Request Users",
+    "Type": "OptionSetInfo"
+  }
+]
