@@ -1,5 +1,6 @@
 "'Edit Request' As screen":
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Fill: =RGBA(30, 45, 62, 1)
+    LoadingSpinnerColor: =RGBA(0, 188, 242, 1)
 
     ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -31,10 +32,10 @@
             PaddingBottom: =2
             PaddingLeft: =5
             PaddingTop: =2
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             ZIndex: =2
 
             Arrow1 As arrow.backArrow:
@@ -54,7 +55,7 @@
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
+                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
@@ -77,16 +78,17 @@
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             ZIndex: =3
 
             FormEditRequest As form:
                 AlignInContainer: =AlignInContainer.Center
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(85, 106, 129, 1)
                 DataSource: =Requests
+                Fill: =RGBA(76, 208, 245, 1)
                 Height: =554
                 Item: =galRequests.Selected
                 LayoutMinHeight: =250
@@ -97,7 +99,7 @@
                 ZIndex: =1
 
                 "'Assigned user_DataCard1' As typedDataCard.comboBoxEditCard":
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_Assigneduser"
                     Default: =ThisItem.'Assigned user'
@@ -117,7 +119,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -135,31 +137,33 @@
 
                     DataCardValue1 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronBackground: =RGBA(30, 45, 62, 1)
                         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
                         ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                        ChevronFill: =RGBA(33, 33, 33, 1)
-                        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-                        Color: =RGBA(51, 51, 51, 1)
+                        ChevronFill: =RGBA(218, 218, 218, 1)
+                        ChevronHoverBackground: =RGBA(67, 85, 106, 1)
+                        ChevronHoverFill: =RGBA(218, 218, 218, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DefaultSelectedItems: =Parent.Default
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayFields: =["mpc_name"]
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(30, 45, 62, 1)
                         Font: =Font.'Segoe UI'
-                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        HoverColor: =RGBA(51, 51, 51, 1)
-                        HoverFill: =RGBA(212, 212, 212, 1)
+                        HoverBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(67, 85, 106, 1)
                         Items: =Choices([@Requests].mpc_Assigneduser)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(0, 120, 212, 1)
+                        PressedBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        PressedColor: =RGBA(30, 45, 62, 1)
+                        PressedFill: =RGBA(0, 188, 242, 1)
                         SearchFields: =["mpc_name"]
                         SearchItems: =Search(Choices([@Requests].mpc_Assigneduser),DataCardValue1.SearchText,"mpc_name")
-                        SelectionFill: =RGBA(0, 120, 212, 1)
+                        SelectionColor: =RGBA(30, 45, 62, 1)
+                        SelectionFill: =RGBA(0, 188, 242, 1)
                         SelectMultiple: =false
                         Size: =13
                         Tooltip: =Parent.DisplayName
@@ -173,9 +177,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -198,7 +202,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -215,7 +219,7 @@
                         ZIndex: =4
 
                 Title_DataCard3 As typedDataCard.textualEditCard:
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_title"
                     Default: =ThisItem.Title
@@ -236,7 +240,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -255,23 +259,24 @@
                     DataCardValue22 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(30, 45, 62, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        HoverColor: =RGBA(51, 51, 51, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        HoverBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(30, 45, 62, 1)
                         MaxLength: =Parent.MaxLength
                         PaddingLeft: =5
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(51, 51, 51, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 188, 242, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(30, 45, 62, 1)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -288,9 +293,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -313,7 +318,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -330,7 +335,7 @@
                         ZIndex: =4
 
                 Client_DataCard3 As typedDataCard.textualEditCard:
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_client"
                     Default: =ThisItem.Client
@@ -351,7 +356,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -370,23 +375,24 @@
                     DataCardValue19 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(30, 45, 62, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        HoverColor: =RGBA(51, 51, 51, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        HoverBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(30, 45, 62, 1)
                         MaxLength: =Parent.MaxLength
                         PaddingLeft: =5
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(51, 51, 51, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 188, 242, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(30, 45, 62, 1)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -403,9 +409,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -428,7 +434,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -445,7 +451,7 @@
                         ZIndex: =4
 
                 "'Proposed deadline_DataCard3' As typedDataCard.dateTimeEditCard":
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_proposeddeadline"
                     Default: =ThisItem.'Proposed deadline'
@@ -465,7 +471,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -483,21 +489,23 @@
 
                     DateValue3 As datepicker:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        Color: =RGBA(51, 51, 51, 1)
+                        CalendarHeaderFill: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        Color: =RGBA(255, 255, 255, 1)
                         DefaultDate: =Parent.Default
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
                         EndYear: =Year(Today())+100
+                        Fill: =RGBA(30, 45, 62, 1)
                         Font: =Font.'Segoe UI'
-                        HoverDateFill: =RGBA(200, 200, 200, 1)
+                        HoverDateFill: =RGBA(85, 106, 129, 1)
                         IconBackground: =RGBA(250, 155, 112, 1)
+                        IconFill: =RGBA(30, 45, 62, 1)
                         IsEditable: =true
                         PaddingBottom: =0
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        SelectedDateFill: =RGBA(0, 120, 212, 1)
+                        SelectedDateFill: =RGBA(0, 188, 242, 1)
                         Size: =13
                         StartYear: =1899
                         Tooltip: =Parent.DisplayName
@@ -511,7 +519,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -536,9 +544,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -561,7 +569,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -578,7 +586,7 @@
                         ZIndex: =7
 
                 Context_DataCard3 As typedDataCard.textualMultiLineEditCard:
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_context"
                     Default: =ThisItem.Context
@@ -598,7 +606,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -617,24 +625,25 @@
                     DataCardValue20 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(30, 45, 62, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         Height: =80
-                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        HoverColor: =RGBA(51, 51, 51, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        HoverBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(30, 45, 62, 1)
                         Mode: =TextMode.MultiLine
                         PaddingLeft: =5
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(51, 51, 51, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 188, 242, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(30, 45, 62, 1)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -651,9 +660,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -676,7 +685,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -693,7 +702,7 @@
                         ZIndex: =4
 
                 "'Concrete scenario_DataCard3' As typedDataCard.textualMultiLineEditCard":
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_concretescenario"
                     Default: =ThisItem.'Concrete scenario'
@@ -713,7 +722,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -732,24 +741,25 @@
                     DataCardValue21 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(30, 45, 62, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         Height: =80
-                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        HoverColor: =RGBA(51, 51, 51, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        HoverBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(30, 45, 62, 1)
                         Mode: =TextMode.MultiLine
                         PaddingLeft: =5
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(51, 51, 51, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 188, 242, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(30, 45, 62, 1)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -766,9 +776,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -791,7 +801,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -808,7 +818,7 @@
                         ZIndex: =4
 
                 "'User Information_DataCard3' As typedDataCard.textualMultiLineEditCard":
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_userinformation"
                     Default: =ThisItem.'User Information'
@@ -828,7 +838,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -847,24 +857,25 @@
                     DataCardValue23 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(30, 45, 62, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         Height: =80
-                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        HoverColor: =RGBA(51, 51, 51, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        HoverBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(30, 45, 62, 1)
                         Mode: =TextMode.MultiLine
                         PaddingLeft: =5
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(51, 51, 51, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 188, 242, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(30, 45, 62, 1)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -881,9 +892,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -906,7 +917,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -923,7 +934,7 @@
                         ZIndex: =4
 
                 "'Key data and limitations_DataCard3' As typedDataCard.textualMultiLineEditCard":
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_keydataandlimitations"
                     Default: =ThisItem.'Key data and limitations'
@@ -943,7 +954,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -962,24 +973,25 @@
                     DataCardValue24 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(30, 45, 62, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         Height: =80
-                        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                        HoverColor: =RGBA(51, 51, 51, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        HoverBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 30%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(30, 45, 62, 1)
                         Mode: =TextMode.MultiLine
                         PaddingLeft: =5
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(51, 51, 51, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
+                        PressedBorderColor: =RGBA(0, 188, 242, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(30, 45, 62, 1)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -996,9 +1008,9 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
+                        Color: =RGBA(255, 88, 78, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(255, 88, 78, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
@@ -1021,7 +1033,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -1038,7 +1050,7 @@
                         ZIndex: =4
 
                 "'Request ID_DataCard3' As typedDataCard.textualViewCard":
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(85, 106, 129, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="mpc_name"
                     Default: =ThisItem.'Request ID'
@@ -1057,7 +1069,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         FocusedBorderThickness: =4
@@ -1078,7 +1090,7 @@
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
-                        Color: =RGBA(51, 51, 51, 1)
+                        Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisplayMode: =Parent.DisplayMode
@@ -1098,19 +1110,20 @@
             Button1 As button:
                 AlignInContainer: =AlignInContainer.End
                 BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(30, 45, 62, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(250, 155, 112, 1)
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                FocusedBorderColor: =ColorFade(Self.Fill, 75%)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(30, 45, 62, 1)
+                HoverFill: =ColorFade(RGBA(0, 188, 242, 1), 10%)
+                PressedBorderColor: =ColorFade(RGBA(0, 188, 242, 1), 50%)
+                PressedColor: =RGBA(30, 45, 62, 1)
+                PressedFill: =ColorFade(RGBA(0, 188, 242, 1), 30%)
                 Size: =15
                 Text: ="Submit Changes"
                 Width: =194
